@@ -29,6 +29,7 @@
     "lint": "yarn prettier_lint && yarn eslint",
     "typecheck": "flow check",
     "build": "cross-env NODE_ENV=production babel src -d dist --copy-files",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "build:examples": "webpack --mode production",
     "deploy:examples": "gh-pages -d examples/dist",
